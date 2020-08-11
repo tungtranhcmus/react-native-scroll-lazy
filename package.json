@@ -1,0 +1,34 @@
+{
+  "name": "react-native-scroll-lazy",
+  "version": "1.0.0",
+  "description": "react-native-scroll-lazy is a very high-performance large list contain images for React-Native",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tung Tran",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tungtranhcmus/react-native-scroll-lazy"
+  },
+  "bugs": {
+    "url": "https://github.com/tungtranhcmus/react-native-scroll-lazy/issues"
+  },
+  "homepage": "https://github.com/tungtranhcmus/react-native-scroll-lazy",
+  "dependencies": {
+    "react-native-measure-layout-scrollview": "^1.1.0",
+    "react-native-prototype-to-scrollview": "^1.1.0"
+  },
+  "keywords": [
+    "react-native",
+    "lazyload",
+    "load",
+    "LazyListView",
+    "LazyView",
+    "LazyScrollView",
+    "LazyLoad",
+    "Lazy",
+    "largelist"
+  ],
+  "license": "MIT"
+}
