@@ -48,7 +48,8 @@ class LazyloadView extends Component {
     }
 
     updateHeightArray = (height) => {
-        const { place, updateHeightArray, host, heightTemp } = this.props
+        const { place, updateHeightArray, host, heightTemp, eventChangeHeight } = this.props
+        eventChangeHeight && eventChangeHeight(height)
         updateHeightArray && updateHeightArray({ height: (height - heightTemp), place, host })
     }
 

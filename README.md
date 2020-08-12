@@ -1,14 +1,10 @@
 ## react-native-scroll-lazy 
 
-```
-react-native-scroll-lazy is a very high-performance large list contain images for React-Native
-```
+`react-native-scroll-lazy` is a very high-performance large list contain images for React-Native
 
 ## Installation
 
-```
-npm install react-native-scroll-lazy
-```
+`npm install react-native-scroll-lazy` or `yarn add react-native-scroll-lazy`
 
 #### Components
 
@@ -23,8 +19,13 @@ LazyloadView        | Based on View component. This component\`s content won\`t 
 2. Layout the views which will be lazyloaded by using `LazyloadView` instead of `View`.
 3. Specify `host` prop for every `LazyloadView`, the `host` prop should be same as outer `LazyloadScrollView` component`s name prop.
 4. Using `eventShowView` in `LazyloadView` to listening event change show/hide view.
+5. Using `eventChangeHeight` in `LazyloadView` to get init height view.
 
-####  Example
+#### Important
+
+Should not change the height of the `LazyloadView` after it has rendered, this will lead to `lazy loading` false
+
+#### Example
 
 ```js
 import React, { Component } from 'react-native';
@@ -41,7 +42,8 @@ class LazyloadScrollViewExample extends Component{
               <View flex={1}>
                 {Data.map((file, i) =>
                   (<LazyloadView
-                    eventShowView={(is_show, id) => { console.tron.log('left', is_show, id) }}
+                    eventShowView={(is_show, id) => {/* TODO */}}
+                    eventChangeHeight={(height)=>{ /* TODO */}}
                     key={i}
                     host="lazyload-list"
                     style={{ height: 200, backgroundColor: '#99ccff', marginHorizontal: 5, marginTop: 5, borderRadius: 5 }}
@@ -53,7 +55,8 @@ class LazyloadScrollViewExample extends Component{
               <View flex={1}>
                 {Data.map((file, i) =>
                   (<LazyloadView
-                    eventShowView={(is_show, id) => { console.tron.log('right', is_show, id) }}
+                    eventShowView={(is_show, id) => {/* TODO */}}
+                    eventChangeHeight={(height)=>{ /* TODO */}}
                     key={i}
                     host="lazyload-list"
                     style={{ height: 200, backgroundColor: '#99ccff', marginHorizontal: 5, marginTop: 5, borderRadius: 5 }}
