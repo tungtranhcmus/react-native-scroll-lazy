@@ -1,6 +1,6 @@
 {
   "name": "react-native-scroll-lazy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react-native-scroll-lazy is a very high-performance large list contain images for React-Native",
   "main": "src/index.js",
   "scripts": {
